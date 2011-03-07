@@ -68,7 +68,7 @@ class MysqlSessionInit implements EventSubscriber
         $args->getConnection()->executeUpdate("SET NAMES ".$this->_charset . $collation);
     }
 
-    public function getSubscribedEvents()
+    public static function getSubscribedEvents()
     {
         return array(Events::postConnect);
     }
